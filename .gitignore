@@ -1,0 +1,15 @@
+# environment
+venv/
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.vscode/
+.DS_Store
+.env
+
+# regenerable files
+data/processed/
+models/nb_tuned.pkl
+models/lr_tuned.pkl
+models/svm_tuned.pkl
