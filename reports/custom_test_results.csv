@@ -1,0 +1,21 @@
+category,expected,message,clean,predicted,spam_score,correct
+NG scam / spam,spam,"Congratulations! You have won N5,000,000 in the MTN promo. Send your account details to claim now",congratul numtoken numtoken numtoken mtn promo send account detail claim,spam,0.603,True
+NG scam / spam,spam,URGENT! Your MTN line will be blocked. Click http://bit.ly/mtn-verify to update your details,urgent mtn line block click urltoken updat detail,spam,0.811,True
+NG scam / spam,spam,"Dear customer, your BVN has been suspended. Visit www.gtb-update.com now to reactivate",dear custom bvn suspend visit urltoken reactiv,spam,0.885,True
+NG scam / spam,spam,FREE data! Dial *123*1# or text WIN to 3030 to get 10GB free. Offer ends tonight,free data dial numtoken numtoken text win numtoken get numtoken gb free offer end tonight,spam,0.987,True
+NG scam / spam,spam,"Earn N50,000 daily from home! No experience needed. WhatsApp 08031234567 to join now",earn numtoken numtoken daili home experi need whatsapp phonetoken join,spam,0.896,True
+NG scam / spam,spam,"You have been selected for a CBN grant of N500,000. Reply with your full name and account number",select cbn grant numtoken numtoken repli full name account number,spam,0.779,True
+NG scam / spam,spam,Airtel: You have won a free iPhone 15. Call 08098765432 now to claim your prize,airtel free iphon numtoken call phonetoken claim prize,spam,1.0,True
+NG bank / telecom (legit),ham,"Dear customer, your account has been credited with NGN 25,000. Bal: NGN 40,200",dear custom account credit ngn numtoken numtoken bal ngn numtoken numtoken,spam,0.86,False
+NG bank / telecom (legit),ham,Your OTP is 482913. It expires in 5 minutes. Do not share it with anyone.,otp numtoken expir numtoken minut share anyon,ham,0.066,True
+NG bank / telecom (legit),ham,"Debit alert: NGN 3,500.00 spent at Shoprite Lekki. Available balance NGN 12,300.50",debit alert ngn numtoken numtoken numtoken spent shoprit lekki avail balanc ngn numtoken numtoken numtoken,ham,0.376,True
+NG bank / telecom (legit),ham,Your data bundle of 5GB will expire on 30 Nov. Dial *312# to check your balance,data bundl numtoken gb expir numtoken nov dial numtoken check balanc,ham,0.312,True
+Pidgin / casual,ham,"Abeg call me when you reach house, I dey wait",abeg call reach hous dey wait,ham,0.001,True
+Pidgin / casual,ham,How far? You dey come church tomorrow?,far dey come church tomorrow,ham,0.001,True
+Pidgin / casual,ham,Wetin dey happen? I don try call you since morning,wetin dey happen tri call sinc morn,ham,0.003,True
+Pidgin / casual,ham,"I no go fit come today, traffic too much for Lekki. Make we talk tomorrow",go fit come today traffic much lekki make talk tomorrow,ham,0.001,True
+Standard English ham,ham,Meeting has been moved to 3pm tomorrow. Please confirm.,meet move numtoken pm tomorrow pleas confirm,ham,0.004,True
+Standard English ham,ham,Please send the project report before 5pm today,pleas send project report numtoken pm today,ham,0.016,True
+Standard English ham,ham,Happy birthday! Wishing you a wonderful year ahead,happi birthday wish wonder year ahead,ham,0.0,True
+UK-style spam (control),spam,Free entry! Text WIN to 80086 to get a chance to win a free iPhone,free entri text win numtoken get chanc win free iphon,spam,0.989,True
+UK-style spam (control),spam,WINNER!! You have been selected to receive a £900 prize. Call 09061701461 now,winner select receiv currencytoken prize call phonetoken,spam,1.0,True
