@@ -13,7 +13,7 @@
 > Author:   **ANIUDE PAUL IFEANYI** 
 
 ![The app: result card for a spam message](reports/figures/app_screenshot_check.PNG)
-![](reports/figures/app_screenshot_insights.PNG)
+
 
 ---
 
@@ -158,27 +158,26 @@ The final model was chosen by **cross-validated F1** on the training data, not b
 
 ### Class distribution
 
-![Class distribution](reports/figures/class imbalance.png)
+![Class distribution](reports/figures/class_imbalance.png)
 
 Spam makes up only about one in eight messages, which is why accuracy alone is not enough and why stratification matters.
 
 ### Message length and structure
 
-![Length distributions](reports/figures/eda_length_distributions.png)
+![Length distributions](reports/figures/hist_plot.png)
 
-![Box plots of length and digit counts](reports/figures/eda_boxplots.png)
+![Box plots of length and digit counts](reports/figures/boxplot.png)
 
 Spam messages tend to be **longer**, contain **more digits**, use **more capital letters**, and more often include **currency symbols and links** than ham. Exact numbers from the notebook:
 
-**[FILL: paste the group means table from Notebook 2, Cell 4b (char_count, word_count, digit_count, upper_ratio, has_url, has_currency by label)]**
 
 ### Most frequent words
 
-![Top words in ham and spam](reports/figures/eda_top_words.png)
+![Top words in ham and spam](reports/figures/top_ham_spam.png)
 
-![Word clouds](reports/figures/eda_wordclouds.png)
+![Word clouds](reports/figures/word_cloud.png)
 
-Ham is dominated by everyday conversational words, while spam is dominated by calls to action and offers (typically words such as *free*, *call*, *txt*, *claim*, *prize*, *reply*, *stop*). **[FILL: confirm or edit this sentence against your own top-words chart]**
+Ham is dominated by everyday conversational words, while spam is dominated by calls to action and offers (typically words such as *free*, *call*, *txt*, *claim*, *prize*, *reply*, *stop*).
 
 ---
 
@@ -196,7 +195,7 @@ All figures below are on the **held-out test set (1,031 messages: 903 ham and 12
 | Logistic Regression | 0.96 | 0.95 | 0.96 |
 | Linear SVM | 0.98 | 0.93 | 0.95 |
 
-![Baseline confusion matrices](reports/figures/baseline_confusion_matrices.png)
+![Baseline confusion matrices](reports/figures/confusion_matrix.png)
 
 Naive Bayes was very precise but missed about a quarter of the spam: with default smoothing it only flags messages it is very sure about. This was a tuning problem rather than a model problem.
 
@@ -218,7 +217,7 @@ The three models are within about half a point of each other, so cross-validatio
 | Linear SVM (tuned) | 0.9874 | 0.9752 | 0.9219 | 0.9478 |
 | Naive Bayes (tuned) | 0.9874 | **0.9832** | 0.9141 | 0.9474 |
 
-![Tuned model comparison](reports/figures/model_comparison_tuned.png)
+![Tuned model comparison](reports/figures/model_comaparison_tuned.png)
 
 ![Confusion matrices of the tuned models](reports/figures/confusion_matrices_tuned.png)
 
@@ -288,7 +287,7 @@ The final model made 10 errors on 1,031 messages. Reading them is more informati
 
 ![Top features of the Logistic Regression model](reports/figures/top_features_lr.png)
 
-The chart shows the words (after stemming) with the largest weights toward spam and toward ham. Spam is driven by offers, calls to action and the special tokens from preprocessing (`numtoken`, `phonetoken`, `currencytoken`, `urltoken`), while ham is driven by conversational words. **[FILL: add one sentence naming 3 or 4 top spam words and 3 or 4 top ham words from your chart]**
+The chart shows the words (after stemming) with the largest weights toward spam and toward ham. Spam is driven by offers, calls to action and the special tokens from preprocessing (`numtoken`, `phonetoken`, `currencytoken`, `urltoken`), while ham is driven by conversational words.
 
 The app shows the same information for each message you enter: the words that pushed its score up or down.
 
@@ -321,9 +320,9 @@ The training data is mostly UK and Singapore English, so I tested the final mode
 
 ## 10. The Streamlit app
 
-**Live demo:** [YOUR-APP-URL](YOUR-APP-URL)
+**Live demo:** [APP-URL](https://sms-spam-detector-solution.streamlit.app)
 
-![Model insights tab](reports/figures/app_screenshot_insights.png)
+![Model insights tab](reports/figures/app_screenshot_insights.PNG)
 
 | Feature | Description |
 |---|---|
@@ -400,7 +399,7 @@ sms-spam-detector/
 
 ```bash
 # 1. Clone the repository
-git clone https://github.com/YOUR-USERNAME/sms-spam-detector.git
+git clone https://github.com/Aniude-tech/sms-spam-detector.git
 cd sms-spam-detector
 
 # 2. Create and activate a virtual environment
@@ -450,4 +449,4 @@ Python · pandas · NumPy · scikit-learn · NLTK · Matplotlib · Seaborn · Wo
 
 **License.** Code: **[FILL: choose a license, for example MIT, and add a `LICENSE` file]**. The dataset keeps its original CC BY 4.0 license.
 
-**Acknowledgements.** Built as part of the Tech4Youth Advanced ICT Skills Training Programme. Thanks to the programme team and tutors, and to the creators of the SMS Spam Collection.
+**Acknowledgements.** Built as part of the Tech4Youth Advanced ICT Skills Training Programme. Thanks to the programme team and my own very tutor Sir Nedu.
