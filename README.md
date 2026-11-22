@@ -217,7 +217,7 @@ The three models are within about half a point of each other, so cross-validatio
 | Linear SVM (tuned) | 0.9874 | 0.9752 | 0.9219 | 0.9478 |
 | Naive Bayes (tuned) | 0.9874 | **0.9832** | 0.9141 | 0.9474 |
 
-![Tuned model comparison](reports/figures/model_comaparison_tuned.png)
+![Tuned model comparison](reports/figures/model_comparison_tuned.png)
 
 ![Confusion matrices of the tuned models](reports/figures/confusion_matrices_tuned.png)
 
