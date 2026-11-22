@@ -10,9 +10,10 @@
 [![Open the live app](https://static.streamlit.io/badges/streamlit_badge_black_white.svg)](YOUR-APP-URL)
 
 > Capstone project, **Tech4Youth Advanced ICT Skills Training Programme** (Machine Learning / AI track).
-> Author: **ANIUDE PAUL IFEANYI**
+> Author:   **ANIUDE PAUL IFEANYI** 
 
-![The app: result card for a spam message](reports/figures/app_screenshot_check.png)
+![The app: result card for a spam message](reports/figures/app_screenshot_check.PNG)
+![](reports/figures/app_screenshot_insights.PNG)
 
 ---
 
@@ -76,13 +77,13 @@ Because only about 12–13% of messages are spam, **accuracy alone is misleading
 | **Creators** | Tiago A. Almeida and José María Gómez Hidalgo |
 | **License** | CC BY 4.0 |
 | **Raw size** | 5,574 messages: 4,827 ham (86.6%) and 747 spam (13.4%) |
-| **After removing duplicates and empty messages** | **[FILL: N rows, with ham and spam counts, from Notebook 1 and 3 output]** |
-| **Train / test split** | **[FILL: train rows]** / 1,031 rows (stratified 80/20); the test set has 128 spam messages (12.4%) |
+| **After removing duplicates and empty messages** | **[N rows = 5160, with ham count = 4518 and spam counts = 642, from Notebook 1 and 3 output]** |
+| **Train / test split** | **[train rows]** / 1,031 rows (stratified 80/20); the test set has 128 spam messages (12.42%) |
 | **Format** | Tab-separated file: label, then message text; converted to CSV in Notebook 1 |
 
 **Data-quality steps** (Notebook 1 and 3):
 
-- **Exact duplicates were removed** before splitting, so the same message can never appear in both train and test (that would inflate the scores). I also checked for duplicates with conflicting labels. **[FILL: result of the conflicting-label check]**
+- **Exact duplicates were removed** before splitting, so the same message can never appear in both train and test (that would inflate the scores). I also checked for duplicates with conflicting labels. **[Messages with conflicting labels: 0]**
 - **9 messages became empty after cleaning**, for example messages containing only stopwords or symbols. They were dropped because there is nothing for the model to learn from; this is under 0.2% of the data.
 
 ---
@@ -139,9 +140,9 @@ Three classical models were compared. They are fast, work well on sparse TF-IDF 
 
 | Model | Tuned hyperparameters (grid) | Best values found |
 |---|---|---|
-| Multinomial Naive Bayes | `alpha` ∈ {0.01, 0.05, 0.1, 0.5, 1.0}; n-grams; `min_df` ∈ {1, 2, 3} | **[FILL from Notebook 4: `gs_nb.best_params_`]** |
-| Logistic Regression | `C` ∈ {0.5, 1, 5, 10, 50}; n-grams; `min_df` ∈ {1, 2, 3} | **[FILL: `gs_lr.best_params_`]** |
-| Linear SVM | `C` ∈ {0.1, 0.5, 1, 2, 5}; n-grams; `min_df` ∈ {1, 2, 3} | **[FILL: `gs_svm.best_params_`]** |
+| Multinomial Naive Bayes | `alpha` ∈ {0.01, 0.05, 0.1, 0.5, 1.0}; n-grams; `min_df` ∈ {1, 2, 3} | **[ {'clf__alpha': 0.1, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}]** |
+| Logistic Regression | `C` ∈ {0.5, 1, 5, 10, 50}; n-grams; `min_df` ∈ {1, 2, 3} | **[ {'clf__C': 50, 'tfidf__min_df': 3, 'tfidf__ngram_range': (1, 1)}]** |
+| Linear SVM | `C` ∈ {0.1, 0.5, 1, 2, 5}; n-grams; `min_df` ∈ {1, 2, 3} | **[ {'clf__C': 5, 'tfidf__min_df': 1, 'tfidf__ngram_range': (1, 2)}]** |
 
 Grid searches were scored by **F1 on the spam class** using stratified 5-fold cross-validation on the training set only.
 
@@ -157,7 +158,7 @@ The final model was chosen by **cross-validated F1** on the training data, not b
 
 ### Class distribution
 
-![Class distribution](reports/figures/eda_class_distribution.png)
+![Class distribution](reports/figures/class imbalance.png)
 
 Spam makes up only about one in eight messages, which is why accuracy alone is not enough and why stratification matters.
 
