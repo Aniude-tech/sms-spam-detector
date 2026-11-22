@@ -447,6 +447,6 @@ Python · pandas · NumPy · scikit-learn · NLTK · Matplotlib · Seaborn · Wo
 
 **Dataset.** Almeida, T. A., Gómez Hidalgo, J. M., and Yamakami, A. (2011). *Contributions to the study of SMS spam filtering: new collection and results.* Proceedings of the 11th ACM Symposium on Document Engineering (DocEng '11), pp. 259–262. Available from the [UCI Machine Learning Repository](https://archive.ics.uci.edu/dataset/228/sms+spam+collection) under CC BY 4.0.
 
-**License.** Code: **[FILL: choose a license, for example MIT, and add a `LICENSE` file]**. The dataset keeps its original CC BY 4.0 license.
+**License.** Code: **MIT**
 
 **Acknowledgements.** Built as part of the Tech4Youth Advanced ICT Skills Training Programme. Thanks to the programme team and my own very tutor Sir Nedu.
