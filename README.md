@@ -77,7 +77,7 @@ Because only about 12–13% of messages are spam, **accuracy alone is misleading
 | **Creators** | Tiago A. Almeida and José María Gómez Hidalgo |
 | **License** | CC BY 4.0 |
 | **Raw size** | 5,574 messages: 4,827 ham (86.6%) and 747 spam (13.4%) |
-| **After removing duplicates and empty messages** | **[N rows = 5160, with ham count = 4518 and spam counts = 642, from Notebook 1 and 3 output]** |
+| **After removing duplicates and empty messages** | **N rows = 5160, with ham count = 4518 and spam counts = 642** |
 | **Train / test split** | **[train rows]** / 1,031 rows (stratified 80/20); the test set has 128 spam messages (12.42%) |
 | **Format** | Tab-separated file: label, then message text; converted to CSV in Notebook 1 |
 
